@@ -1,0 +1,37 @@
+<html></html>
+<head>
+    <title>등수구하기</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            // let answer = [1, 1, 1, 1, 1];
+            let n = arr.length;
+            let answer = Array.from({length:n}, ()=> 1);
+
+            // 방법 1
+            // let answer = [];
+            // count = 1;
+
+            // for(let i in arr) {
+            //     for(let j in arr) {
+            //         if(arr[i] < arr[j]) count++;
+            //     }
+            //     answer.push(count);
+            //     count = 1;
+            // }
+
+            // 방법 2
+            for(let i in arr) {
+                for(let j in arr) {
+                    if(arr[i] < arr[j]) answer[i]++;
+                }
+            }
+
+            return answer;
+        }
+        let arr = [92, 89, 92, 100, 76];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>중복 문자 제거</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer = [];
+
+            for (let i=0; i<s.length; i++) {
+                if(i===s.indexOf(s[i])) {
+                    answer.push(s[i]);
+                }
+            }
+
+            // filter : 기존배열 -필터-> 새로운 배열
+            // console.log(s.indexOf("good"));
+
+            // answer = s.filter(function(v, i){
+            //     // console.log(v, i, s.indexOf(v));
+            //     // if(i === s.indexOf(v))
+            //     //     return true;
+            //     return i === s.indexOf(v);
+            // });
+
+            // arrow function 사용
+            // answer = s.filter((v, i) => i === s.indexOf(v));
+
+            return answer;
+        }
+        
+        let str = ["good", "time", "good", "time", "student"];
+        console.log(solution(str));
+    </script>
+</body>
+</html>

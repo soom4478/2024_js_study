@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Boolean 내장객체</title>
+</head>
+<body>
+    <script>
+        var x1 = true;              // var x1 = false;
+        var y1 = new Boolean(true);
+        // 동일한 true이지만 call by value(stack에), call by reference(heap에)
+
+        console.log(typeof x1); // boolean
+        console.log(typeof y1); // object
+
+        // console.log(x1 == y1);  // == -> true
+        // console.log(x1 === y1); // === -> false
+
+        // var x2 = "abc";
+        // var y2 = new String("abc");
+
+        // console.log(typeof x2);
+        // console.log(typeof y2);
+
+        // console.log(x2 == y2);
+        // console.log(x2 === y2);
+
+        // console.log(Boolean(10>9)); // object타입의 true
+        // console.log(10>9);          // boolean타입의 true
+
+        // var x = 1;
+        // console.log(x);
+        // console.log(Boolean(x));
+
+        var x = "";
+        console.log(Boolean(x)); // 값을 할당하지 않으면 false, 그 외 나머지 숫자 true
+
+
+    </script>
+</body>
+</html>

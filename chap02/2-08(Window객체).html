@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Window객체</title>
+</head>
+<body>
+    <h1>123456789</h1>
+    <script>
+        // window 내장객체
+        // console.log(window);
+        // alert("에러발생");
+
+        // var yn = confirm("정말로 탈퇴하겠습니까?");
+        // console.log(yn);
+
+        // if(confirm("정말로 탈퇴하겠습니까?")) {
+        //     // 탈퇴 처리
+        //     console.log("회원탈퇴");
+        // }
+
+        // var txt = prompt("당신이 좋아하는 연예인은? ");
+        // // console.log(txt);
+        // if(txt === null) {
+        //     console.log("취소");
+        // }
+        // else if(txt === "") {
+        //     console.log("공백");
+        // }
+        // else if(txt != null) {
+        //     console.log(txt);
+        // }
+
+        // window.open("https://naver.com");
+        // window.print(); // 현재 페이지를 출력
+
+        // setTimeout
+        // setTimeout(function(){
+        //     console.log("우리 똥강아지들");
+        // }, 3000); // 3초
+
+        // var i = 0;
+        // setInterval(function(){ // 반복
+        //     console.log("사랑해요 BTS : " + i);
+        //     i++;
+        // } ,3000);
+
+        var i = 0;
+        var fnc = setInterval(function(){ // 횟수 정해짐
+            console.log("사랑해요 BTS : " + i);
+            i++;
+            if(i===10) {
+                clearInterval(fnc); // 함수종료
+            }
+        } ,3000);
+
+
+    </script>
+</body>
+</html>

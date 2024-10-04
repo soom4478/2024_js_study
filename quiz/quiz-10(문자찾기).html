@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>문자찾기</title>
+</head>
+<body>
+    <script>
+        function solution(s, t) {
+            let answer=0;
+
+            // 방법1 : for문을 이용
+            // for(var x of s) {
+            //     // console.log(x);
+            //     if(x === t) answer++;
+            // }
+
+            // 방법2 : 내장함수 이용 : split함수
+            // console.log(s.split(t));
+            answer = s.split(t).length - 1;
+            
+            return answer;
+        }
+        let str = "COMPUTERPROGRAMINGR"
+        // [COMPUTE]R[P]R[OG]R[AMING]R[] 맨 끝에 R이 있어도 토큰이 만들어짐
+        console.log(solution(str, "R"));
+    </script>
+</body>
+</html>

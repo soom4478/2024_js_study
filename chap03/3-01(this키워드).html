@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>this 키워드</title>
+</head>
+<body>
+     <!-- element 내 this는 element -->
+    <button onclick="this.style.backgroundColor='red'">클릭1</button>
+    <button onclick="callFunc(this)">클릭2</button>
+    <select onchange="chageSelect(this)">
+        <option value = "모에">1</option>
+        <option value = "무에">2</option>
+        <option value = "뀽">3</option>
+    </select>
+
+    <script>
+        // console.log(this); // this는 window객체를 지칭
+        // console.log(window); //--> this =(동일) window
+        // alert("가방사러 가자~");
+        // window.alert("가방사러 가자~");
+        // this.alert("메롱");
+
+        function chageSelect(obj) {
+            console.log(obj.value);
+        }
+
+        function callFunc(obj) {
+            console.log(obj);
+        }
+
+        function fullName() {
+            alert("얼레리꼴레리 메롱~~");
+            // console.log(this); // 객체 자기 자신을 가르킴
+        }
+
+        var person = {
+            firstName : "길동",
+            lastName : "홍",
+            fullName : function() {
+                // return this.firstName + " " + this.lastName;
+                return person.firstName + " " + person.lastName;
+            }
+        }
+
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.fullName());
+
+        // fullName();
+
+    </script>
+</body>
+</html>

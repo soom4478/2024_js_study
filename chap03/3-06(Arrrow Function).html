@@ -1,0 +1,52 @@
+<html></html>
+<head>
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        // 함수
+        // function hello1() {
+        //     console.log("Hell world1");
+        //     return "헬로우 월드1";
+        // }
+        // console.log(hello1());
+
+        // 변수에 함수
+        // var hello2 = function() {
+        //     console.log("Hell world2");
+        //     return "헬로우 월드2";
+        // }
+        // console.log(hello2());
+
+        // => arrow function
+        // var hello3 = () => {
+        //     console.log("Hell world3");
+        //     return "헬로우 월드3";
+        // }
+        // console.log(hello3());
+
+        // var hello4 = () => {
+        //     return "헬로우 월드4";
+        // }
+        // console.log(hello4());
+
+        // var hello4 = () => "헬로우 월드4"; // 중괄호, return 생략
+        // console.log(hello4());
+
+        // var hello4 = (name) => {
+        //     return "헬로우 월드4" + " " + name;
+        // }
+        // console.log(hello4("홍길동"));
+
+        // var hello4 = (name) => "헬로우 월드4" + " " + name;
+        // console.log(hello4("홍길동"));
+
+        // var hello4 = (firstName, lastName) => "헬로우 월드4" + " " + lastName + " " + firstName;
+        // console.log(hello4("길동", "홍"));
+
+        var hello4 = name => "헬로우 월드4" + " " + name; // 파라미터가 1개일 때 ()생량가능
+        console.log(hello4("홍길동"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        // length : 문자열의 길이를 리턴
+        // var txt = "msmlkmwfwf";
+        // console.log(txt.length);
+        
+        // indexOf
+        var str = "Please locate where 'locate'";
+
+        // console.log(str);
+        // console.log(str.indexOf("locate")); // "locate"의 시작 위치 출력 / 출력값 : 7
+        // console.log(str.indexOf("choi"));   // 출력값 : -1
+
+        // if(str.indexOf("locate") > -1) {
+        //     console.log("locate 문자 발견");
+        // }
+
+        // lastIndexOf
+        // console.log(str.lastIndexOf("locate")); // 뒤에서 부터 / 출력값 : 21
+
+        // search
+        // console.log(str.search("locate"));   // 첫번째로 일치하는 인덱스 값 반환 7
+
+        // slice <-- 중요!!
+        var str = "Apple, Banana, Kiwi";
+        // console.log(str.slice(7,13));       // 7부터 13 전(12)까지 slice(index, 글자수) / 출력값 : Banana
+        // console.log(str.slice(7));          // 출력값 : Banana, Kiwi
+        // console.log(str.slice(-12, -6));    // 출력값 : Banana
+        // console.log(str.slice(-12));        // 출력값 : Banana, KIwi
+
+        // substring
+        // console.log(str.substring(7, 13));  // 7번 인덱스부터 13번째 글자 전까지 / 출력값 : Banana
+
+        // substr
+        // console.log(str.substr(7, 6));      // 7번 인덱스부터 7포함 6글자 / 출력값 : Banana
+
+        // var jumin1 = "070828";
+        // console.log(jumin1.substr(0, 2));
+        // console.log(jumin1.substr(2, 2));
+        // console.log(jumin1.substr(4, 2));
+
+        // var jumin2 = "2007-08-28";
+        // console.log(jumin2.substring(0, jumin2.indexOf("-")));
+
+        // replace
+        // var str1 = "Please visit here";
+        // var str2 = str1.replace("here", "there");
+        // console.log(str2)
+        
+        // var str3 = "Please visit here here here";
+        // var str4 = str3.replace("here", "there");
+        // console.log(str4);
+
+        // 정규표현식
+        // var str5 = "Please visit here here here";   // g(글로벌)는 here를 전부 / i(이그노어)는 대소문자 구분X
+        // var str6 = str5.replace(/here/g, "there");  // g = global
+        // console.log(str6);
+
+        // var str7 = "Please visit here HERE HeRe";
+        // var str8 = str7.replace(/here/gi, "there");  // i = ignore : 대소문자 무시
+        // console.log(str8);
+
+        // 대문자로 : uppercase
+        // var str9 = "Please visit here HERE HeRe";
+        // console.log(str9.toUpperCase());
+
+        // 소문자로 :lowercase
+        // var str9 = "Please visit here HERE HeRe";
+        // console.log(str9.toLowerCase());
+
+        // 대이터베이스 : JOHN, john, John
+        // var txt1 = "Hello";
+        // var txt2 = "Would";
+        // var txt3 = txt1 + txt2;
+        // console.log(txt3);
+        // console.log(txt1.concat(" ", txt2));
+        // console.log(txt1.concat(" ", "Hong", " Love ", txt2));
+
+        // padStart(0을 앞부터 채움)
+        // var str1 = "1234"
+        // console.log(str1.padStart(8, 0));   // 8자리를 잡고 비어 있는 나머지는 0으로 채움 / 출력 : 00001234
+        // console.log("C-" + str1.padStart(8, 0));    // padStart : 제품코드, 자릿수 정리할 때 자주 사용 / 출력 : C-00001234
+
+        // 특정 자릿수를 통일하기 위해서 사용
+        // var str12 = "5"
+        // var str12 = "15"
+        // console.log(str12.padStart(2, 0));
+
+        // padEnd(0을 뒤부터 채움)
+
+        // var str12 = "5"
+        // var str12 = "15"
+        // console.log(str12.padEnd(4, 0));
+
+        // charAt()
+        // var str13 = "Hello World";
+        // console.log(str13.charAt(1));
+
+        // split <-- 중요!! 실무에 많이 쓰임!!
+        var tags = "키보드,기계식,블루투스";
+        var arr1 = tags.split(",", 2);  // 숫자는 그 개수만큼만 배열로 만든다는 뜻
+        console.log(arr1);
+
+        var birthDay = "2007-08-28";
+        var arr2 = birthDay.split("-");
+        console.log(arr2);
+
+    </script>
+</body>
+</html>

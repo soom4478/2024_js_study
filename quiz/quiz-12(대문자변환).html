@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>대문자변환</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            // 방법1 : toLowerCase(), toUpperCase() 함수 -> 이게 더 나은듯
+            let answer = "";
+
+            for(let i of s) {
+                // console.log(i, i.toLowerCase());
+                if(i === i.toLowerCase()) answer += i.toUpperCase();
+                else answer += i;
+            }
+
+            // 방법2 : 아스키코드 이용
+            // let answer = "";
+
+            // for (let x of s) {
+            //     // console.log(x.charCodeAt()); // 아스키 코드값으로 변환
+            //     let num = x.charCodeAt();
+            //     if(num>=97 && num<=122)
+            //         answer += String.fromCharCode(num-32);
+            //     else answer += x;
+            // }
+
+
+            return answer;
+        }
+        
+        let str = "ItisTimetoStudy"
+        // console.log(str.toUpperCase());
+
+        console.log(solution(str));
+    </script>
+</body>
+</html>

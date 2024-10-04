@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>문자열변환</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            // 방법-1 : for문을 이용
+            // let answer = "";
+            // for(let x of s) {
+            //     // console.log(x);
+            //     if(x==="A")
+            //         answer += '#';
+            //     else
+            //         answer += x;
+            // } // for
+            // return answer;
+
+            // 방법-2) replace()와 정규표현식을 이용
+            let answer = "";
+            answer = s.replace(/A/gi, '#');
+            return answer;
+        }
+        let str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

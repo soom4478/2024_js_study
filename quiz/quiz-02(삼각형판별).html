@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>삼각형 판별하기</title>
+</head>
+<body>
+    <script>
+        function solution(a,b,c) {
+            let answer = "Yes", max;    // 처음부터 answer을 Yes로 초기화하여 코드를 간결하게 만듬
+            let sum = a+b+c;
+            
+            if(a>b) max = a;
+            else max = b;
+            if(max<c) max = c;
+
+            if((sum-max)<max) answer = "No";
+            // else {
+            //     answer = "Yes";
+            // }
+
+            return answer;
+        }
+        
+
+        console.log(solution(6,7,11));
+        console.log(solution(13,33,17));
+    </script>
+</body>
+</html>

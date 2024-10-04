@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>데이터타입(String, Number, Object, Array, Undefined, Null)</title>
+</head>
+<body>
+    <script>
+        // 문자열 : String
+        let name1 = "홍길동";
+        let name2 = '홍길순';
+
+        let str1 = "저의 이름은 '홍길동' 입니다";
+        let str2 = '저의 이름은 "홍길동" 입니다';
+
+        console.log(str1);
+        console.log(str2);
+
+        let str3 = "저의 이름은 \"홍길동\" 입니다";
+        console.log(str3);
+
+        let str4 = "저의 이름은 \'홍길동\' 입니다";
+        console.log(str4);
+
+        let str5 = "저의 이름은 \홍길동\ 입니다";
+        console.log(str5);
+
+        let str6 = "저의 이름은 \\홍길동\\ 입니다";
+        console.log(str6);
+
+        // 숫자 : Number
+        let x = 3;
+        let y = 3.14;
+        console.log(x+y);
+
+        let u1;
+        console.log(u1);
+
+        let u2 = undefined;
+        console.log(u2);
+
+        // Null
+        let n1 = null;
+
+        console.log(n1);
+
+        // Object
+        let person1 = {};
+        person1.firstName = "홍";
+        person1.lastName = "길동";
+        person1.age = 20;
+
+        console.log(person1);
+
+        let person2 = {
+            firstName:"길순",
+            lastName:"홍",
+            age:10
+        }
+
+        let person3 = {};
+        person3["firstName"] = "철수";
+        person3["lastName"] = "김";
+        person3["age"] = 10;
+
+        person2.email = "hong@gmail.com";
+        console.log(person3);
+
+        console.log(person1.firstName);
+        console.log(person1.lastName);
+        console.log(person1.age);
+
+        person1.school = "미림";
+        console.log(person1.school);
+
+        document.write(person2.firstName);
+        document.write(person2.lastName);
+
+        // 배열 - Array
+        let car = ["현대", "기아", "쫄보", "테슬라", "벤츠"];   // {}는 오브젝트
+        console.log(car[0]);
+        console.log(car[1]);
+        console.log(car[2]);
+        console.log(car[3]);
+        console.log(car[4]);
+
+        let num = [3,7,2,9,12];
+        console.log(num[0]);
+        console.log(num[2]);
+        console.log(num[4]);
+
+        let arr1 = ["현대", 3, undefined, null];
+        console.log(arr1[0]);
+        console.log(arr1[1]);
+        console.log(arr1[2]);
+        console.log(arr1[3]);
+
+        let arr2 = [person1, person2, person3];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+
+        let arr3 = [];
+        arr3[0] = 24;
+        arr3[1] = "대한민국";
+        
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+
+        let arr4 = [];
+        arr4.push(2024);        // 자동적으로 다음(0번) 방에 들어감
+        arr4.push("BTS");
+        arr4.push(7);
+        arr4.push(3.14);
+        arr4.push(null);
+        arr4.push(undefined);
+
+        console.log(arr4[0]);
+
+        for(var i=0; i<arr4.length; i++) {
+            console.log(arr4[i]);
+            document.write(arr4[i] + "<br>");
+        }
+
+        // Boolean 참/거짓 - true or false
+        let isAdult = true;
+        let num1 = 5;
+        let num2 = 7;
+        console.log(num1 > num2);
+
+        console.log(typeof num1);       // typeof : 데이터타입을 알려줌 // number로 처리(intX)
+        console.log(typeof isAdult);
+        console.log(typeof name1);
+        console.log(typeof person1);
+        console.log(typeof arr4);       // 배열은 오브젝트로 처리
+
+    </script>
+</body>
+</html>

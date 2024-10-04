@@ -1,0 +1,44 @@
+<html></html>
+<head>
+    <title>Object Literal Symtex Extension</title>
+</head>
+<body>
+    <script>
+
+        // var person = {
+        //     fistName : "길동", // key값 : value값
+        //     lastName : "홍"
+        // }
+        // console.log(person);
+
+        // 동적
+        // var first = "순신";
+        // var last = "이";
+
+        // var person = {
+        //     fistName : first,
+        //     lastName : last
+        // }
+        // console.log(person);
+
+        // 오브젝트의 key 값을 동적으로 할당
+        var type1 = "name"; // 나라 별 언어로 변경 가능해짐 -> 글로벌 서비스 가능
+        var type2 = "age";
+
+        var score= {
+            [type1] : "홍",
+            [type2] : 23
+        }
+
+        console.log(score);
+
+        score.grade = 2;
+        console.log(score);
+        
+        var type3 = "성적";
+        score[type3] = 2;
+        console.log(score);
+
+    </script>
+</body>
+</html>
