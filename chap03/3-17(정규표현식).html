@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Regular Expression</title>
+</head>
+<body>
+    <script>
+        // 정규표현식 : /Pattern/modifier (형식)
+        // var patt = /World/ig;
+
+        // var str1 = "Hello world";
+        // console.log(str1.search("World"));
+        // console.log(str1.search(/World/));
+        // console.log(str1.search(/World/i)); // i : 대소문자 구분 안함
+
+        // var str2 = "Hello WORLD! world!";
+        // console.log(str2.replace("World", "Hong"));
+        // console.log(str2.replace(/World/i, "Hong"));
+        // console.log(str2.replace(/World/ig, "Hong")); // g:전부 다 교체
+
+        // var patt = /World/ig; // 이런 식을 더 선호함
+        // console.log(str2.replace(patt, "Hong"));
+
+        // var str3 = "Is this all there is";
+        // var patt1 = /[hat]/g;
+        // var result1 = str3.match(patt1);
+        // console.log(result1.join(''));
+
+        // var str4 = "ad000asd8osdjs10dfiojwij5djs54lncv4";
+        // var patt2 = /[0-9]/g;
+        // var result2 = str4.match(patt2);
+        // console.log(parseInt(result2.join('')));
+
+        // str5 = "re, green, red, gree, gen, red, blue, yellow";
+        // var patt3 = /(red|green)/g;
+        // var result3 = str5.match(patt3);
+        // console.log(result3);
+
+        // \d : 숫자
+        // var str6 = "Please Calll 199 Hurry Up";
+        // var patt4 = /\d/g;
+        // var result4 = str6.match(patt4);
+        // console.log(result4);
+
+        // \s : 공백
+        // var str7 = "Please Calll 199 Hurry Up";
+        // var patt5 = /\s/g;
+        // var result5 = str7.match(patt5);
+        // console.log(result5);
+
+        // var str8 = "HELLO, LOOK AT ME";
+        // var patt6 = /\bLO/g; // \b : LO로 시작되는 단어 찾기
+        // var result6 = str8.match(patt6);
+        // console.log(result6);
+
+        // n+ : n이 최소한 1개 이상(one or more) - 연속되는 것은 하나로 묶나봄..
+        // var str9 = "HellooOo";
+        // var patt7 = /o+/g; // oo, o
+        // console.log(str9.match(patt7));
+
+        // n* : n이 zero or more - 뒤에 없어도 하나로 치고 연속으로 계속 나와도 하나로 묶음(?)
+        // var str10 = "HellooOo World";
+        // var patt8 = /lo*/g; // l, loo, l
+        // console.log(str10.match(patt8));
+
+        // n? : zero or one - 뒤에 없거나 있어도 하나만 나와야함
+        // var str11 = "1, 100, and 1000 or 1111";
+        // var patt9 = /10?/g; // 1, 10, 10, 1, 1, 1, 1
+        // console.log(str11.match(patt9));
+
+        // 실무예 : 우편번호 5자리
+        // 32543 : 다섯자리인지 판별, 다섯 자리 모두가 숫자인지 판별
+        // var patt10 = /\d{5}/; // 숫자 5자리
+        // var postalCode = "23452";       // true
+        // var postalCode = "P23452111";    // false여야 하는데...
+        // console.log(patt10.test(postalCode));
+
+        // var patt11 = /^\d{5}$/; // 숫자 5자리    // ^\d : 숫자로 시작, $ : 뒤에 더이상 붙으면 X
+        // var postalCode = "23452";       // true
+        // console.log(patt11.test(postalCode));
+
+        // 핸드폰 번호 : 010-1234-5678 -> 오류남 수정할 것!
+        // var patt12 = /^{010}-\d{4}-\d{4}$/;
+        // var tel = "010-1234-5678";
+        // console.log(patt12.test(tel));
+
+        //이메일 주소 : s2305@gmail.com
+        var patt13 = /^\w+([._-]?\w+)*@\w+(.\w{2,3})+$/;
+        console.log(patt13.test("soom4478@gmail.com"));
+
+    </script>
+</body>
+</html>

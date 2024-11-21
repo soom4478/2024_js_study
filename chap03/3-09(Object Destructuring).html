@@ -6,9 +6,26 @@
     <script>
         function getPerson() {
             return {
-                
+                firstName : "길동",
+                lastName : "홍",
+                age : 23,
+                email : "Hong@gmail.com",
+                city : "Seoul",
+                country : "Chosun"
             }
         }
+
+        // var per = getPerson(); => 필요 한 값 외의 값도 불러오는 문제
+        // console.log(per);
+        // console.log(per.firstName);
+        // console.log(per.lastName);
+
+        // var {firstName, lastName} = getPerson();
+        // // firstName, lastName만 불러옴
+        // console.log(firstName);
+        // console.log(lastName);
+        // // console.log(city); // 안 불러옴
+   
     </script>
 </body>
 </html>

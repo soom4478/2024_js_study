@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Promise</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+
+        // var x = 0;
+        // var y = callServerData();
+        // var z = x + y; // y값을 서버에서 불러오기 전에 실행 -> 오류
+        // console.log(z); // 서버로부터 y값을 받아오기 전에 실행되면 에러 발생
+
+        var url = "https://78aeb894-7efa-4ce7-a6fe-5ef1b0f62dab.mock.pstmn.io/productList";
+
+        // var date = axios.get(url) .then(function (response) {
+        //     // handle success
+        //     console.log(response.data);
+        //     return response.data;
+        // });
+
+        function getData() {
+            return new Promise(function(resolve, reject) { // 데이터를 가져올 때까지 기다려줌
+                axios.get(url) .then(function (response) {
+                    console.log(response.data);
+                    resolve(response.data);
+                    // reject(response.data);
+                });
+            })
+        }
+
+        var total = 0;
+
+        getData() .then(function(data) {
+            for(var item of data.products) {
+                total += item.price; // data를 불러오기 전에 실행 -> 오류
+            }
+            console.log(total);
+        });
+
+    </script>
+</body>
+</html>

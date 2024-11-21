@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>클래스(class)</title>
+</head>
+<body>
+    <script>
+        // 클래스 : 객체를 생성하기 위한 틀, 설계도
+
+        class Car {
+            constructor(modelName, modelYear, type, price) {
+                this.modelName = modelName;
+                this.modelYear = modelYear;
+                this.type = type;
+                this.price = price;
+            };
+
+            getModelName() {
+                return this.modelName;
+            }
+
+            getModelYear() {
+                return this.modelYear;
+            }
+
+            getType() {
+                return this.type;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+
+            setPrice(price) {
+                this.price = price;
+            }
+            
+        } // car
+
+        // Car car = new Car("아이오닉", "2021", 40000); <- java
+
+        // let car = new Car("아이오닉", "2021", "e", 4000);
+        // console.log(car.getModelName());
+        // console.log(car.getModelYear());
+        // console.log(car.getPrice());
+        // car.setPrice(3500);
+        // console.log(car.getPrice());
+
+        // let car2 = new Car("옵티마", "2000", "g", 2000);
+        // console.log(car2.getModelName());
+        // console.log(car2.getModelYear());
+        // console.log(car2.getPrice());
+        // car2.setPrice(100);
+        // console.log(car2.getPrice());
+
+        class ElectronicCar extends Car {
+            constructor(modelName, modelYear, price, time) {
+                super(modelName, modelYear, "e", price);
+                this.time = time;
+            }
+
+            getTime() {
+                return this.time;
+            }
+            setTime(time) {
+                this.time = time;
+            }
+        }
+
+        let eleCar1 = new ElectronicCar("아이오닉2", 2023, 4000, 60);
+        console.log(eleCar1.getModelName());
+        console.log(eleCar1.getModelYear());
+        console.log(eleCar1.getPrice());
+        console.log(eleCar1.getType());
+        console.log(eleCar1.getTime());
+        eleCar1.setTime(30);
+        console.log(eleCar1.getTime());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>문자열 압축</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer="";
+            cnt = 1;
+            s += " ";
+
+            for(let i=0; i<s.length-1; i++) { // 인덱스값 가져올 때는 파라미터 3개짜리로 쓰기
+                if(s[i] === s[i+1]) {
+                    cnt++;
+                }
+                else {
+                    answer += s[i];
+                    if(cnt > 1) answer += String(cnt);
+                    cnt = 1;
+                }
+            }
+
+            return answer;
+        }
+        
+        let str = "KKHSSSSSSSE";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

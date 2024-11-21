@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>회문문자열2</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "Yes";
+            str = str.toLowerCase().replace(/[^a-z]/g, "");
+            let len = str.length;
+            // console.log(str);
+
+            for(let i in str) {
+                if(str[i] !== str[len - i -1]) {
+                    answer = "No";
+                }
+            }
+
+            return answer;
+        }
+        
+        let str = "found777, Time, Study, Yduts, Emit, 9Dnuof"
+        console.log(solution(str));
+    </script>
+</body>
+</html>
