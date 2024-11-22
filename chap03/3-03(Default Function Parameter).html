@@ -4,36 +4,36 @@
   </head>
   <body>
     <script>
-      // function say1(massage) {
-      //     console.log(massage);
-      // }
-      // say1("무에무에뀽");
-      // say1(); ---> undefined
+      function say1(massage) {
+          console.log(massage);
+      }
+      say1("무에무에뀽");
+      say1(); //---> undefined
 
-      // function say2(massage) {
-      //     if(massage != undefined) {
-      //         console.log(massage);
-      //     }
-      //     else {
-      //         console.log("매개변수가 없습니다");
-      //     }
-      // }
-      // say2("무에무에뀽");
-      // say2();
+      function say2(massage) {
+          if(massage != undefined) {
+              console.log(massage);
+          }
+          else {
+              console.log("매개변수가 없습니다");
+          }
+      }
+      say2("무에무에뀽");
+      say2();
 
-      // function plus1(a, b) {
-      //     console.log(a+b);
-      // }
-      // plus1(1, 2);
-      // plus1(1); // NaN: Not a Number(숫자가 아님)
+      function plus1(a, b) {
+          console.log(a+b);
+      }
+      plus1(1, 2);
+      plus1(1); // NaN: Not a Number(숫자가 아님)
 
       // Default Function Parameter
-      // function say3(message = "매개변수가 없습니다.") {
-      //     console.log(message);
-      // }
+      function say3(message = "매개변수가 없습니다.") {
+          console.log(message);
+      }
 
-      // say3("안녕하세요?");
-      // say3();
+      say3("안녕하세요?");
+      say3();
 
       function plus2(a = 0, b = 0) {
         console.log(a + b);
